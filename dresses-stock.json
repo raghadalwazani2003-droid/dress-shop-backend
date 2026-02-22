@@ -1,0 +1,150 @@
+[
+  {
+    "id": 1,
+    "name": "فستان أسود",
+    "nameEn": "Black Dress",
+    "price": 35,
+    "stock": [
+      { "color": "أسود", "colorEn": "Black", "size": "S", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "M", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "L", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "S", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "M", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "L", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "S", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "M", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "L", "qty": 1 },
+      { "color": "أصفر", "colorEn": "Yellow", "size": "S", "qty": 1 },
+      { "color": "أصفر", "colorEn": "Yellow", "size": "M", "qty": 1 },
+      { "color": "أصفر", "colorEn": "Yellow", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "فستان العباي",
+    "nameEn": "Abaya Dress",
+    "price": 35,
+    "stock": [
+      { "color": "وردي", "colorEn": "Pink", "size": "S", "qty": 1 },
+      { "color": "وردي", "colorEn": "Pink", "size": "M", "qty": 1 },
+      { "color": "وردي", "colorEn": "Pink", "size": "L", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "S", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "M", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "L", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "S", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "M", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "L", "qty": 1 },
+      { "color": "أزرق فاتح", "colorEn": "Baby Blue", "size": "S", "qty": 1 },
+      { "color": "أزرق فاتح", "colorEn": "Baby Blue", "size": "M", "qty": 1 },
+      { "color": "أزرق فاتح", "colorEn": "Baby Blue", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "فستان شتوي ازرار",
+    "nameEn": "Buttoned Winter Dress",
+    "price": 22,
+    "stock": [
+      { "color": "خمري", "colorEn": "Burgundy", "size": "S", "qty": 1 },
+      { "color": "خمري", "colorEn": "Burgundy", "size": "M", "qty": 1 },
+      { "color": "خمري", "colorEn": "Burgundy", "size": "L", "qty": 1 },
+      { "color": "بيج", "colorEn": "Beige", "size": "S", "qty": 1 },
+      { "color": "بيج", "colorEn": "Beige", "size": "M", "qty": 1 },
+      { "color": "بيج", "colorEn": "Beige", "size": "L", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "S", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "M", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "L", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "S", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "M", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "L", "qty": 1 },
+      { "color": "سكري", "colorEn": "Cream", "size": "S", "qty": 1 },
+      { "color": "سكري", "colorEn": "Cream", "size": "M", "qty": 1 },
+      { "color": "سكري", "colorEn": "Cream", "size": "L", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "S", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "M", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "فستان سهرة برّاق",
+    "nameEn": "Glittering Evening Dress",
+    "price": 55,
+    "stock": [
+      { "color": "ذهبي", "colorEn": "Gold", "size": "S", "qty": 1 },
+      { "color": "ذهبي", "colorEn": "Gold", "size": "M", "qty": 1 },
+      { "color": "ذهبي", "colorEn": "Gold", "size": "L", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "S", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "M", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "L", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "S", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "M", "qty": 1 },
+      { "color": "أزرق", "colorEn": "Blue", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "فستان حريم السلطان ",
+    "nameEn": "Sultan's Harem Dress",
+    "price": 55,
+    "stock": [
+      { "color": "أخضر", "colorEn": "Green", "size": "S", "qty": 1 },
+      { "color": "أخضر", "colorEn": "Green", "size": "M", "qty": 1 },
+      { "color": "أخضر", "colorEn": "Green", "size": "L", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "S", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "M", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "فستان سهرة سناسل",
+    "nameEn": "Chain Evening Dress",
+    "price": 60,
+    "stock": [
+      { "color": "أحمر", "colorEn": "Red", "size": "S", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "M", "qty": 1 },
+      { "color": "أحمر", "colorEn": "Red", "size": "L", "qty": 1 },
+      { "color": "أبيض", "colorEn": "White", "size": "S", "qty": 1 },
+      { "color": "أبيض", "colorEn": "White", "size": "M", "qty": 1 },
+      { "color": "أبيض", "colorEn": "White", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "جاكيت شتوي",
+    "nameEn": "Winter Jacket",
+    "price": 75,
+    "stock": [
+      { "color": "أبيض", "colorEn": "White", "size": "S", "qty": 1 },
+      { "color": "أبيض", "colorEn": "White", "size": "M", "qty": 1 },
+      { "color": "أبيض", "colorEn": "White", "size": "L", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "S", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "M", "qty": 1 },
+      { "color": "بني", "colorEn": "Brown", "size": "L", "qty": 1 },
+      { "color": "رمادي", "colorEn": "Grey", "size": "S", "qty": 1 },
+      { "color": "رمادي", "colorEn": "Grey", "size": "M", "qty": 1 },
+      { "color": "رمادي", "colorEn": "Grey", "size": "L", "qty": 1 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "طقم شتوي",
+    "nameEn": "Winter Set",
+    "price": 120,
+    "stock": [
+      { "color": "خمري", "colorEn": "Burgundy", "size": "S", "qty": 1 },
+      { "color": "خمري", "colorEn": "Burgundy", "size": "M", "qty": 1 },
+      { "color": "خمري", "colorEn": "Burgundy", "size": "L", "qty": 1 },
+      { "color": "توتي", "colorEn": "Berry", "size": "S", "qty": 1 },
+      { "color": "توتي", "colorEn": "Berry", "size": "M", "qty": 1 },
+      { "color": "توتي", "colorEn": "Berry", "size": "L", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "S", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "M", "qty": 1 },
+      { "color": "أسود", "colorEn": "Black", "size": "L", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "S", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "M", "qty": 1 },
+      { "color": "زيتي", "colorEn": "Olive", "size": "L", "qty": 1 }
+    ]
+  }
+]
