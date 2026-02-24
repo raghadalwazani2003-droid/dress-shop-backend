@@ -41,6 +41,11 @@ app.use(cors({
   credentials: true
 }))
 
+// Health check
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀")
+})
+
 // توليد OTP
 function generateOtp() {
   return Math.floor(100000 + Math.random() * 900000).toString()
