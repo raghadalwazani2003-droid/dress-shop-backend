@@ -44,11 +44,27 @@ app.use(compression())
 app.use(express.json({ limit: '10mb' }))
 
 // CORS - allow frontend
-const frontendUrl = process.env.FRONTEND_URL || process.env.CLIENT_URL || ''
-app.use(cors({
-  origin: frontendUrl ? frontendUrl.split(',').map(u => u.trim()).filter(Boolean) : '*',
-  credentials: true
-}))
+const allowedOrigins = [
+  process.env.FRONTEND_URL || process.env.CLIENT_URL || 'https://your-frontend.vercel.app',
+  'http://localhost:5173'
+]
+
+const corsOptions = {
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Origin not allowed'))
+    }
+  },
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}
+
+app.use(cors(corsOptions))
+// مهم: التعامل مع جميع طلبات OPTIONS (preflight)
+app.options('*', cors(corsOptions))
 
 // Health check
 app.get("/", (req, res) => {
