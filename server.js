@@ -30,7 +30,7 @@ const usersCollection = db.collection('users')
 const emailOtpsCollection = db.collection('emailOtps')
 
 // Email sender
-const { sendOtpEmail } = require('./email')
+const { sendOtpEmail, verifyConnection, hasEmailConfig } = require('./email')
 
 const OTP_EXPIRY_MS = 5 * 60 * 1000
 const OTP_RESEND_COOLDOWN_MS = 60 * 1000
@@ -64,6 +64,18 @@ app.use(cors({
 // Health check
 app.get("/", (req, res) => {
   res.send("Backend is running 🚀")
+})
+
+// Endpoint to check SMTP / email configuration (useful for deploy diagnostics)
+app.get('/email/verify', async (req, res) => {
+  try {
+    if (!hasEmailConfig) return res.status(400).json({ ok: false, message: 'Email not configured (EMAIL_HOST/EMAIL_USER/EMAIL_PASS missing)' })
+    await verifyConnection()
+    return res.json({ ok: true, message: 'SMTP connection OK' })
+  } catch (err) {
+    console.error('email/verify error:', err && err.message)
+    return res.status(500).json({ ok: false, message: err && err.message })
+  }
 })
 
 // توليد OTP

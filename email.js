@@ -39,22 +39,42 @@ const transporter = hasEmailConfig
 let verified = false
 let verificationFailed = false
 
-async function verifyConnection() {
+function mask(str = '') {
+  if (!str) return ''
+  if (str.length <= 4) return '****'
+  return str.slice(0, 2) + '****' + str.slice(-2)
+}
+
+async function verifyConnection(retries = 2) {
   if (!transporter) throw new Error('Email not configured. Check EMAIL_HOST, EMAIL_USER, EMAIL_PASS in .env')
   if (verified) return
   if (verificationFailed) throw new Error('SMTP connection failed. Check EMAIL_USER and EMAIL_PASS')
 
-  try {
-    await transporter.verify()
-    verified = true
-    console.log('[Email] SMTP connection OK. Emails should be sent to inbox (check spam if not).')
-  } catch (err) {
-    verificationFailed = true
-    console.error('[Email] SMTP verification FAILED:', err.message)
-    console.error('[Email] Fix: 1) Enable 2FA on Gmail 2) Create App Password at myaccount.google.com/apppasswords 3) EMAIL_PASS="abcdefghijklmnop"')
-    if (err.response) console.error('[Email] Response:', err.response)
-    throw new Error(`SMTP verification failed: ${err.message}`)
+  let lastErr = null
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      console.log(`[Email] verifying SMTP (attempt ${attempt + 1}/${retries + 1}) - host=${emailHost} user=${mask(emailUser)}`)
+      await transporter.verify()
+      verified = true
+      verificationFailed = false
+      console.log('[Email] SMTP connection OK. Emails should be sent to inbox (check spam if not).')
+      return
+    } catch (err) {
+      lastErr = err
+      console.error('[Email] SMTP verification attempt failed:', err && err.message)
+      // small backoff before retry
+      if (attempt < retries) await new Promise(r => setTimeout(r, 1000 * (attempt + 1)))
+    }
   }
+
+  verificationFailed = true
+  console.error('[Email] SMTP verification FAILED after retries:', lastErr && lastErr.message)
+  console.error('[Email] Fix suggestions:')
+  console.error(' - Ensure EMAIL_HOST, EMAIL_USER, EMAIL_PASS are set in the environment')
+  console.error(' - For Gmail: enable 2FA and create an App Password at myaccount.google.com/apppasswords')
+  console.error(' - If using a third-party provider, verify host, port, secure settings, and network access')
+  if (lastErr && lastErr.response) console.error('[Email] Response:', lastErr.response)
+  throw new Error(`SMTP verification failed: ${lastErr && lastErr.message}`)
 }
 
 // ==================== دالة إرسال OTP ====================
@@ -97,4 +117,6 @@ async function sendOtpEmail(to, otp) {
 // ==================== تصدير الدالة ====================
 module.exports = {
   sendOtpEmail,
+  verifyConnection,
+  hasEmailConfig,
 }
