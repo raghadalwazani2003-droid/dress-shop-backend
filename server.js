@@ -63,8 +63,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions))
-// مهم: التعامل مع جميع طلبات OPTIONS (preflight)
-app.options('*', cors(corsOptions))
+
 
 // Health check
 app.get("/", (req, res) => {
