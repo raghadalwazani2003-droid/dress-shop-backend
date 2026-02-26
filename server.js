@@ -45,13 +45,12 @@ app.use(express.json({ limit: '10mb' }))
 
 // CORS - allow frontend
 const allowedOrigins = [
-  "http://localhost:3000"
+  "http://localhost:3000",                     // للاختبار محلي
+  "https://dress-shop-ten.vercel.app"         // الدومين الصحيح للفرونت
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    console.log("Incoming Origin:", origin);
-
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
